@@ -29,11 +29,11 @@ func main() {
 		appPort = "8080"
 	}
 
-	dbHost := os.Getenv("DB_HOST")
-	dbPort := os.Getenv("DB_PORT")
-	dbUser := os.Getenv("DB_USER")
-	dbPassword := os.Getenv("DB_PASSWORD")
-	dbName := os.Getenv("DB_NAME")
+	dbHost := os.Getenv("PGHOST")
+	dbPort := os.Getenv("PGPORT")
+	dbUser := os.Getenv("PGUSER")
+	dbPassword := os.Getenv("PGPASSWORD")
+	dbName := os.Getenv("PGDATABASE")
 
 	psqlInfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		dbHost, dbPort, dbUser, dbPassword, dbName,
